@@ -1,0 +1,16 @@
+{
+    "name": "Encuesta MOTORZONE",
+    "description": "Encuesta para elegir logo MOTORZONE",
+    "keywords": ["poll", "encuesta"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cristian Gonzalez V",
+            "email": "cristianneatproy@gmail.com"
+        }
+    ],
+    "require": {
+        "j4mie/paris": "1.*"
+    }
+
+}
