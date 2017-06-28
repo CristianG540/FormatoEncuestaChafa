@@ -3,8 +3,8 @@
 require_once __DIR__ . '/vendor/autoload.php';
 ORM::configure([
     'connection_string' => 'mysql:host=localhost;dbname=motozone_encuesta',
-    'username' => 'motozone_encuesta', //'username' => 'motozone_encuesta',
-    'password' => 'Webmaster2017#@' //'password' => 'Webmaster2017#@'
+    'username' => 'root', //'username' => 'motozone_encuesta',
+    'password' => '' //'password' => 'Webmaster2017#@'
 ]);
 
 /**
