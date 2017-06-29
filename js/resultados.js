@@ -1,11 +1,12 @@
 var modGrafica = new Vue({
-	el : "#graph-container",
+	el : ".contact-form-area",
 	mounted : function(){
         this.getData();
     },
 	data : {
-		barChart : '',
-		data : []
+		barChart  :  '',
+		data      : [],
+		dVotantes : []
 	},
 	methods : {
 		init : function(){
@@ -50,7 +51,8 @@ var modGrafica = new Vue({
 			var scope = this;
 			$.get('getData.php')
             .done(function(d){
-            	scope.data = d;
+            	scope.data = d.graph;
+            	scope.dVotantes = d.votantes;
                 scope.init();
             })
             .fail(this.failReq);

@@ -3,8 +3,8 @@
 require_once __DIR__ . '/vendor/autoload.php';
 ORM::configure([
     'connection_string' => 'mysql:host=localhost;dbname=motozone_encuesta',
-    'username' => 'root', //'username' => 'motozone_encuesta',
-    'password' => '' //'password' => 'Webmaster2017#@'
+    'username' => 'motozone_encuesta', //'username' => 'motozone_encuesta',
+    'password' => 'Webmaster2017#@' //'password' => 'Webmaster2017#@'
 ]);
 
 /**
@@ -31,7 +31,16 @@ try {
         return (int)$val->votos;
     }, $allVotes);
     
-    echo json_encode($newData);
+
+    echo json_encode([
+        'graph'    => $newData,
+        'votantes' => [
+            1 => Encuestamotor::where('opcion', 1)->find_array(),
+            2 => Encuestamotor::where('opcion', 2)->find_array(),
+            3 => Encuestamotor::where('opcion', 3)->find_array(),
+            4 => Encuestamotor::where('opcion', 4)->find_array()
+        ]
+    ]);
     
 } catch (\PDOException $e) {
     header('HTTP/1.1 500 Internal Server Booboo');

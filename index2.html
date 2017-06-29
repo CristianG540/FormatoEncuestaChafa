@@ -16,10 +16,7 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <!--Font Awesome-->
         <link rel="stylesheet" href="css/font-awesome.min.css">
-        <!--Owl Carousel-->
-        <link rel="stylesheet" href="vendors/owl.carousel/owl.carousel.css">
-        <!--Magnific Popup-->
-        <link rel="stylesheet" href="vendors/magnific-popup/magnific-popup.css">
+
         <!-- RS5.0 Main Stylesheet -->
         <link rel="stylesheet" type="text/css" href="vendors/revolution/css/settings.css">
 
@@ -49,32 +46,56 @@
                 </ul>
             </div>
         </header>
-
-
-
-        <div class="container" id="graph-container">
-            <div class="col-md-12">
-                <div class="row text-center">
-                    <canvas id="myChart" width="400" height="100"></canvas>
-                </div>
-            </div>
-        </div>
-
         <!--Page Cover-->
         <br><br><br>
 
         <!--Contact Form Area-->
         <section class="row contact-form-area">
+            <div class="container" id="graph-container">
+                <div class="col-md-12">
+                    <div class="row text-center">
+                        <canvas id="myChart" width="400" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="row sectionTitle text-left">
                     <div class="row contact-form-box">
                         <div class="row">
-                            <div class="col-md-6"><img src="images/MZ1.JPG" width="400" height="212" />Opción # 1</div>
-                            <div class="col-md-6"><img src="images/MZ2.JPG" width="274" height="212" />Opción # 2</div>
+                            <div class="col-xs-6">
+                                <img class="img-responsive" src="images/MZ1.JPG" width="400" height="212" />Opción # 1
+                                <ul class="list-group">
+                                    <li class="list-group-item" v-for="item in dVotantes['1']">
+                                        {{ item.nombre }}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <img class="img-responsive" src="images/MZ2.JPG" width="274" height="212" />Opción # 2
+                                <ul class="list-group">
+                                    <li class="list-group-item" v-for="item in dVotantes['2']">
+                                        {{ item.nombre }}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>  
                         <div class="row">
-                            <div class="col-md-6"><img src="images/MZ3.JPG" width="417" height="212" />Opción # 3 </div>
-                            <div class="col-md-6"><img src="images/MZ4.JPG" width="354" height="212" />Opción # 4</div>
+                            <div class="col-xs-6">
+                                <img class="img-responsive" src="images/MZ3.JPG" width="417" height="212" />Opción # 3
+                                <ul class="list-group">
+                                    <li class="list-group-item" v-for="item in dVotantes['3']">
+                                        {{ item.nombre }}
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <img class="img-responsive" src="images/MZ4.JPG" width="354" height="212" />Opción # 4
+                                <ul class="list-group">
+                                    <li class="list-group-item" v-for="item in dVotantes['4']">
+                                        {{ item.nombre }}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>  
                     </div>
                 </div>
@@ -106,17 +127,7 @@
 
         <script src="js/jquery-2.1.4.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <!--Google Map-->
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
-        <script src="js/gmaps.min.js"></script>
-        <!--Magnific Popup-->
-        <script src="vendors/magnific-popup/jquery.magnific-popup.min.js"></script>
-        <!--Owl Carousel-->
-        <script src="vendors/owl.carousel/owl.carousel.min.js"></script>
-        <!--CounterUp-->
-        <script src="vendors/couterup/jquery.counterup.min.js"></script>
-        <!--WayPoints-->
-        <script src="vendors/waypoint/waypoints.min.js"></script>
+
         <!-- RS5.0 Core JS Files -->
         <script src="vendors/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
         <script src="vendors/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
